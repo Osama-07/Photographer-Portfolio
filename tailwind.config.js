@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}", // يدعم ملفات TypeScript و React
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        cairo: ["Cairo", "sans-serif"], // تعريف خط Cairo
+      },
+    },
   },
   plugins: [],
 };

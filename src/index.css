@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Cairo";
+  src: url("./assets/fonts/Cairo-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cairo";
+  src: url("./assets/fonts/Cairo-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  font-family: "Cairo", sans-serif;
+  direction: rtl;
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: orangered;
+  color: white;
+}
