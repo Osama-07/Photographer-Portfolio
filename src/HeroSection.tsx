@@ -40,7 +40,7 @@ const HeroSection = () => {
           أحب ألتقط التفاصيل الصغيرة، لأنه كل شيء له معنى.
         </p>
         <a
-          href="https://www.youtube.com/@abodspro1"
+          href="#about"
           className="duration-200 inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-orange-700 rounded-lg hover:bg-orange-800 focus:ring-4 focus:ring-orange-700 dark:focus:ring-orange-700"
         >
           إعرف عني أكثر
@@ -48,7 +48,8 @@ const HeroSection = () => {
       </div>
       <a
         href="https://wa.me/966531177595"
-        className="fixed w-16 h-16 bottom-10 right-6 duration-200 hover:scale-110 cursor-pointer"
+        target="_blank"
+        className="max-md:opacity-30 hover:opacity-100 fixed w-16 h-16 bottom-10 right-6 duration-200 hover:scale-110 cursor-pointer"
       >
         <img className="w-full" src="/Whatsapp-logo.png" alt="" />
       </a>

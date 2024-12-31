@@ -24,13 +24,11 @@ function Header() {
     <>
       <nav className="md:px-32 bg-white dark:bg-black fixed w-full z-20 top-0 start-0">
         <div className="w-full flex flex-wrap items-center justify-around max-md:justify-between p-4">
-          <a
-            href="https://www.youtube.com/@abodspro1"
-            className="flex items-center space-x-3"
-          >
+          <a href="#home" className="flex items-center space-x-3">
             <img src="/Abodspro-Logo.PNG" className="h-10 ml-4" alt="Logo" />
             <span className="max-md:hidden self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-              الـمـصـور | عـبـدالله عـبـدالـعـزيـز
+              الـمـصـور &nbsp; <span className="main-color">|</span> &nbsp;
+              عـبـدالله عـبـدالـعـزيـز
             </span>
           </a>
           <div className="md:hidden flex md:order-2 space-x-3 md:space-x-0">
