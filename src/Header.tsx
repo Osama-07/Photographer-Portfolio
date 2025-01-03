@@ -22,11 +22,11 @@ function Header() {
 
   return (
     <>
-      <nav className="md:px-32 bg-white dark:bg-black fixed w-full z-20 top-0 start-0">
+      <nav className="md:px-32 bg-black backdrop-blur bg-opacity-50 fixed w-full z-20 top-0 start-0">
         <div className="w-full flex flex-wrap items-center justify-around max-md:justify-between p-4">
           <a href="#home" className="flex items-center space-x-3">
             <img src="/Abodspro-Logo.PNG" className="h-10 ml-4" alt="Logo" />
-            <span className="max-md:hidden self-center text-xl font-semibold whitespace-nowrap dark:text-white">
+            <span className="max-md:hidden self-center text-xl font-semibold whitespace-nowrap text-white">
               الـمـصـور &nbsp; <span className="main-color">|</span> &nbsp;
               عـبـدالله عـبـدالـعـزيـز
             </span>
@@ -35,7 +35,7 @@ function Header() {
             <button
               data-collapse-toggle="navbar-sticky"
               type="button"
-              className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden focus:outline-none focus:ring-2 darktext-gray-400 hover:bg-gray-700 focus:ring-gray-600"
               aria-controls="navbar-sticky"
               aria-expanded="false"
               onClick={(e) => {
