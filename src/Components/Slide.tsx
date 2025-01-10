@@ -1,8 +1,12 @@
-import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import "../assets/css/slide.css";
-import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
-import { useRef } from "react";
+import {
+  EffectCoverflow,
+  Navigation,
+  Pagination,
+  Autoplay,
+} from "swiper/modules";
 
 interface image {
   id: number;
@@ -15,53 +19,56 @@ interface SlideProps {
 }
 
 const Slide: React.FC<SlideProps> = ({ props, title }) => {
-  const swiperRef = useRef<SwiperRef | null>(null);
-  const handleSlideClick = (index: number) => {
-    if (swiperRef.current) {
-      swiperRef.current.swiper.slideTo(index);
-    }
-  };
   return (
-    <section id="tranding" className="max-lg:py-10 lg:py-20">
+    <section id="tranding" className="pb-12 pt-0">
       <div className="container">
-        <h1 className="section-heading text-white text-4xl max-md:text-center">
+        <h1 className="section-heading text-white text-4xl my-5 max-md:text-center">
           {title}
         </h1>
-      </div>
-      <div className="container bg-zinc-800 rounded-xl ">
         <Swiper
-          ref={swiperRef}
-          modules={[EffectCoverflow, Navigation, Pagination]}
-          effect="coverflow"
+          modules={[EffectCoverflow, Navigation, Pagination, Autoplay]}
           grabCursor={true}
-          centeredSlides={true}
-          loop={true}
-          slidesPerView="auto"
+          centeredSlides={false} // لتجنب عرض الصورة في المنتصف فقط
+          slidesPerView={3} // عدد الصور المراد عرضها في نفس الوقت
+          spaceBetween={10} // المسافة بين الصور
           autoplay={{ delay: 3000 }}
-          initialSlide={Math.floor(props.length / 2)}
-          coverflowEffect={{
-            rotate: 20,
-            stretch: 0,
-            depth: 100,
-            modifier: 2.5,
-          }}
-          pagination={{ clickable: true }}
+          loop={props.length > 3}
           navigation={{
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
           }}
+          pagination={{ clickable: true }}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 5,
+            },
+
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 10,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 15,
+            },
+          }}
         >
-          {props.map((prop, index) => (
-            <SwiperSlide key={prop.id + prop.alt} className="tranding-slide">
-              <div className="tranding-slide-img">
+          {props.length > 0 ? (
+            props.map((image, index) => (
+              <SwiperSlide key={index}>
                 <img
-                  src={prop.src}
-                  alt={prop.alt}
-                  onClick={() => handleSlideClick(index)}
+                  src={image.src}
+                  alt={`Slide ${index}`}
+                  style={{ width: "100%", borderRadius: "1rem" }}
                 />
-              </div>
-            </SwiperSlide>
-          ))}
+              </SwiperSlide>
+            ))
+          ) : (
+            <h1 className="text-white text-5xl text-center py-2">
+              لا يـوجـد صـور
+            </h1>
+          )}
         </Swiper>
       </div>
     </section>

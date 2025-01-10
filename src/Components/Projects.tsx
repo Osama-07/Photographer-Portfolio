@@ -8,33 +8,48 @@ const products = [
   },
   {
     id: 2,
-    src: "Personal-ImagePNG.PNG",
+    src: "/Personal-ImagePNG.PNG",
     alt: "Slide 2",
   },
   {
     id: 3,
-    src: "luffy-gear-5-colored.png",
+    src: "/luffy-gear-5-colored.png",
     alt: "Slide 3",
+  },
+  {
+    id: 4,
+    src: "/Landing-Camera.jpg",
+    alt: "Slide 4",
+  },
+  {
+    id: 5,
+    src: "/Personal-ImagePNG.PNG",
+    alt: "Slide 5",
+  },
+  {
+    id: 6,
+    src: "/luffy-gear-5-colored.png",
+    alt: "Slide 6",
   },
 ];
 
-const videos = [
-  {
-    id: 1,
-    src: "/Landing-Camera.jpg",
-    alt: "video 1",
-  },
-  {
-    id: 2,
-    src: "Personal-ImagePNG.PNG",
-    alt: "video 2",
-  },
-  {
-    id: 3,
-    src: "luffy-gear-5-colored.png",
-    alt: "video 3",
-  },
-];
+// const videos = [
+//   {
+//     id: 1,
+//     src: "/Landing-Camera.jpg",
+//     alt: "video 1",
+//   },
+//   {
+//     id: 2,
+//     src: "Personal-ImagePNG.PNG",
+//     alt: "video 2",
+//   },
+//   {
+//     id: 3,
+//     src: "luffy-gear-5-colored.png",
+//     alt: "video 3",
+//   },
+// ];
 
 const Projects = () => {
   return (
@@ -43,7 +58,8 @@ const Projects = () => {
         أعــمـ<span className="main-color">ا</span>لــي
       </h1>
       <Slide props={products} title="تـصـويـر مـنـتـجـات" />
-      <Slide props={videos} title="تـصـويـر زواجــات" />
+      <Slide props={[]} title="تـصـويـر زواجــات" />
+      <Slide props={[]} title="تـصـويـر شـخـصـي" />
     </div>
   );
 };

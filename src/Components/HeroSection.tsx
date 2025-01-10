@@ -41,10 +41,16 @@ const HeroSection = () => {
           أحب ألتقط التفاصيل الصغيرة، لأنه كل شيء له معنى.
         </p>
         <a
-          href="#about"
+          href="#work"
+          className="duration-200 ml-4 inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-orange-700 rounded-lg hover:bg-orange-800 focus:ring-4 focus:ring-orange-700"
+        >
+          أعــمـالـي
+        </a>
+        <a
+          href="#contact"
           className="duration-200 inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-orange-700 rounded-lg hover:bg-orange-800 focus:ring-4 focus:ring-orange-700"
         >
-          إعرف عني أكثر
+          تــواصــل
         </a>
       </div>
       <a
