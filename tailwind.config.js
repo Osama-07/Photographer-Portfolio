@@ -9,6 +9,10 @@ export default {
       fontFamily: {
         cairo: ["Cairo", "sans-serif"], // تعريف خط Cairo
       },
+      colors: {
+        main: "var(--mainColor)",
+        mainAlt: "var(--mainColorAlt)",
+      },
     },
   },
   plugins: [],

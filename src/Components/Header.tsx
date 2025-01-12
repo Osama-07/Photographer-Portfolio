@@ -27,7 +27,7 @@ function Header() {
           <a href="#home" className="flex items-center space-x-3">
             <img src="/Abodspro-Logo.PNG" className="h-10 ml-4" alt="Logo" />
             <span className="max-md:hidden self-center text-xl font-semibold whitespace-nowrap text-white">
-              الـمـصـور &nbsp; <span className="main-color">|</span> &nbsp;
+              الـمـصـور &nbsp; <span className="text-main">|</span> &nbsp;
               عـبـدالله عـبـدالـعـزيـز
             </span>
           </a>
@@ -70,7 +70,7 @@ function Header() {
               <li>
                 <a
                   href="#home"
-                  className="text-xl block mx-3 py-2 px-3 text-white md:hover:text-orange-700 rounded md:bg-transparent md:p-0 max-md:hover:bg-orange-700"
+                  className="text-xl block mx-3 py-2 px-3 text-white md:hover:text-mainAlt rounded md:bg-transparent md:p-0 max-md:hover:bg-mainAlt"
                   aria-current="page"
                 >
                   الرئيسية
@@ -79,7 +79,7 @@ function Header() {
               <li>
                 <a
                   href="#about"
-                  className="text-xl block mx-3 py-2 px-3 text-white md:hover:text-orange-700 rounded md:bg-transparent md:p-0 max-md:hover:bg-orange-700"
+                  className="text-xl block mx-3 py-2 px-3 text-white md:hover:text-mainAlt rounded md:bg-transparent md:p-0 max-md:hover:bg-mainAlt"
                 >
                   عني
                 </a>
@@ -87,7 +87,7 @@ function Header() {
               <li>
                 <a
                   href="#work"
-                  className="text-xl block mx-3 py-2 px-3 text-white md:hover:text-orange-700 rounded md:bg-transparent md:p-0 max-md:hover:bg-orange-700"
+                  className="text-xl block mx-3 py-2 px-3 text-white md:hover:text-mainAlt rounded md:bg-transparent md:p-0 max-md:hover:bg-mainAlt"
                 >
                   أعمالي
                 </a>
@@ -95,7 +95,7 @@ function Header() {
               <li>
                 <a
                   href="#services"
-                  className="text-xl block mx-3 py-2 px-3 text-white md:hover:text-orange-700 rounded md:bg-transparent md:p-0 max-md:hover:bg-orange-700"
+                  className="text-xl block mx-3 py-2 px-3 text-white md:hover:text-mainAlt rounded md:bg-transparent md:p-0 max-md:hover:bg-mainAlt"
                 >
                   خدمات
                 </a>
@@ -103,7 +103,7 @@ function Header() {
               <li>
                 <a
                   href="#contact"
-                  className="text-xl block mx-3 py-2 px-3 text-white md:hover:text-orange-700 rounded md:bg-transparent md:p-0  max-md:hover:bg-orange-700"
+                  className="text-xl block mx-3 py-2 px-3 text-white md:hover:text-mainAlt rounded md:bg-transparent md:p-0  max-md:hover:bg-mainAlt"
                 >
                   تواصل
                 </a>

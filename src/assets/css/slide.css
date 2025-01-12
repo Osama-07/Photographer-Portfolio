@@ -1,5 +1,6 @@
 :root {
-  --primary: #ec994b;
+  --primary: #635047;
+  --secondary: #b59f8d;
   --white: #ffffff;
   --bg: #f5f5f5;
 }
@@ -22,12 +23,6 @@
   margin: 0 auto;
 }
 
-.swiper {
-  background: #282828;
-  padding: 20px;
-  border-radius: 15px;
-}
-
 #tranding .tranding-slider {
   height: 52rem;
   padding: 2rem 0;
@@ -46,7 +41,7 @@
   position: relative;
 }
 
-@media (max-width:500px) {
+@media (max-width: 500px) {
   .tranding-slide {
     width: 28rem !important;
     height: 36rem !important;
@@ -81,7 +76,6 @@
   left: 2rem;
   color: var(--white);
 }
-
 
 .swiper-slide-shadow-left,
 .swiper-slide-shadow-right {
@@ -156,7 +150,7 @@
 
 .swiper-pagination-bullet {
   /* filter: drop-shadow(0px 8px 24px gray); */
-  background: gray;
+  background: var(--secondary);
   opacity: 1 !important;
 }
 

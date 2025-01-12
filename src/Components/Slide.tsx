@@ -53,6 +53,7 @@ const Slide: React.FC<SlideProps> = ({ props, title }) => {
               spaceBetween: 15,
             },
           }}
+          className="!p-5 rounded-2xl shadow-xl bg-gradient-to-b from-main to-main"
         >
           {props.length > 0 ? (
             props.map((image, index) => (

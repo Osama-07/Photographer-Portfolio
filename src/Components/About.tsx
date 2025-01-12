@@ -1,18 +1,21 @@
 const About = () => {
   return (
-    <div id="about" className="bg-gray-200 pt-20 max-md:py-10">
+    <div
+      id="about"
+      className="bg-gradient-to-tr from-main via-white to-mainAlt pt-10"
+    >
       <div className="max-md:mx-4 mx-12">
         <h1 className="text-center text-4xl font-extrabold mb-20">
-          نـبـذة <span className="text-orange-500">عـنـي</span>
+          نـبـذة <span className="text-main">عـنـي</span>
         </h1>
         <div className="info mt-10 grid grid-cols-2 max-lg:grid-cols-1 place-items-center">
           <img className="" src="/Personal-ImagePNG.PNG" alt="Personal Photo" />
-          <div className="max-md:bg-white max-md:rounded-lg pb-5 max-md:text-center">
-            <h1 className="relative md:w-fit max-lg:mx-auto text-2xl font-bold my-10 before:w-1/2 before:h-1 before:bg-orange-500 before:absolute max-md:before:left-1/2 before:-bottom-5 max-lg:before:-translate-x-1/2">
-              الـمـصـور &nbsp; <span className="main-color">|</span> &nbsp;
+          <div className="max-md:rounded-lg pb-5 max-md:text-center">
+            <h1 className="rounded-lg relative md:w-fit max-lg:mx-auto text-2xl font-bold my-10 before:w-full before:h-[2px] before:bg-main before:absolute before:left-0 before:-bottom-4 max-lg:before:mx-auto">
+              الـمـصـور &nbsp; <span className="text-main">|</span> &nbsp;
               عـبـدالله عـبـدالـعـزيـز
             </h1>
-            <p className="md:bg-white md:p-5 md:rounded-lg w-9/12 leading-relaxed text-gray-700 max-xl:w-full max-lg:text-center px-5">
+            <p className="shadow-xl bg-gradient-to-r from-mainAlt to-main tracking-widest text-white p-5 rounded-lg w-9/12 leading-relaxed max-xl:w-full max-lg:text-center px-5">
               أنا عبدالله عبدالعزيز، مصور محترف بالتصوير. <br />
               <br /> أمتلك خبرة طويلة تمتد لعدة سنوات في مجالات متعددة تشمل
               تصوير المنتجات المناسبات، وحفلات الزفاف. <br />

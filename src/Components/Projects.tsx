@@ -53,9 +53,12 @@ const products = [
 
 const Projects = () => {
   return (
-    <div id="work" className="py-20 px-4 bg-black">
+    <div
+      id="work"
+      className="pt-10 px-4 bg-gradient-to-tl from-main to-mainAlt"
+    >
       <h1 className="text-center text-white text-4xl font-extrabold mb-20">
-        أعــمـ<span className="main-color">ا</span>لــي
+        أعــمـ<span className="text-main">ا</span>لــي
       </h1>
       <Slide props={products} title="تـصـويـر مـنـتـجـات" />
       <Slide props={[]} title="تـصـويـر زواجــات" />

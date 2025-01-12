@@ -17,7 +17,8 @@
 }
 
 :root {
-  --mainColor: #f97316;
+  --mainColor: #635047;
+  --mainColorAlt: #b59f8d;
 }
 
 html {
@@ -31,11 +32,11 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: orangered;
+  background: var(--mainColor);
 }
 
 ::selection {
-  background-color: orangered;
+  background-color: var(--mainColor);
   color: white;
 }
 
@@ -43,8 +44,4 @@ html {
   padding-left: 25px;
   padding-right: 25px;
   width: 100%;
-}
-
-.main-color {
-  color: var(--mainColor);
 }
