@@ -28,7 +28,7 @@ const Slide: React.FC<SlideProps> = ({ props, title }) => {
         <Swiper
           modules={[EffectCoverflow, Navigation, Pagination, Autoplay]}
           grabCursor={true}
-          centeredSlides={false} // لتجنب عرض الصورة في المنتصف فقط
+          centeredSlides={true} 
           slidesPerView={3} // عدد الصور المراد عرضها في نفس الوقت
           spaceBetween={10} // المسافة بين الصور
           autoplay={{ delay: 3000 }}
@@ -60,8 +60,9 @@ const Slide: React.FC<SlideProps> = ({ props, title }) => {
               <SwiperSlide key={index}>
                 <img
                   src={image.src}
-                  alt={`Slide ${index}`}
+                  alt={image.alt}
                   style={{ width: "100%", borderRadius: "1rem" }}
+                  className="mb-3"
                 />
               </SwiperSlide>
             ))
