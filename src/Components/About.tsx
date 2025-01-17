@@ -1,8 +1,14 @@
+import { useScrollContext } from "../Context/ScrollContext";
+
 const About = () => {
+  const { activeSection } = useScrollContext();
+  const isActive = activeSection === "about";
+
   return (
     <div
       id="about"
-      className="bg-gradient-to-tr from-main via-white to-mainAlt pt-10"
+      data-section={"about"}
+      className={`relative bg-gradient-to-tr from-main via-white to-mainAlt pt-10 duration-300`}
     >
       <div className="max-md:mx-4 mx-12">
         <h1 className="text-center text-4xl font-extrabold mb-20">
@@ -34,6 +40,11 @@ const About = () => {
             </p>
           </div>
         </div>
+        <div
+          className={`overlay absolute top-0 left-0 w-full h-full bg-black duration-300 ${
+            isActive ? "opacity-0 -z-10" : "opacity-70 z-10"
+          }`}
+        ></div>
       </div>
     </div>
   );

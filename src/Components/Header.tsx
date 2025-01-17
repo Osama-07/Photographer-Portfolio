@@ -8,7 +8,6 @@ function Header() {
       const isMenuVisible = menu && !menu.classList.contains("hidden");
 
       if (isClickOutsideMenu && isMenuVisible) {
-        console.log(e.target);
         menu?.classList.add("hidden");
       }
     };

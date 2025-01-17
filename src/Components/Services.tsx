@@ -1,8 +1,12 @@
 import { useState } from "react";
+import { useScrollContext } from "../Context/ScrollContext";
 
 const Services = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [imageSrc, setImageSrc] = useState("");
+
+  const { activeSection } = useScrollContext();
+  const isActive = activeSection === "services";
 
   // لفتح النافذة المنبثقة
   const openPopup = (src: string) => {
@@ -16,7 +20,11 @@ const Services = () => {
     setImageSrc("");
   };
   return (
-    <div id="services" className="p-10 bg-main">
+    <div
+      className="relative p-10 bg-main"
+      id="services"
+      data-section={"services"}
+    >
       <h1 className="text-center text-white text-4xl font-extrabold mb-20">
         خــدمــ<span className="text-mainAlt">ا</span>تــي
       </h1>
@@ -58,6 +66,11 @@ const Services = () => {
           </div>
         </div>
       )}
+      <div
+        className={`overlay absolute top-0 left-0 w-full h-full bg-black duration-300 ${
+          isActive ? "opacity-0 -z-10" : "opacity-70 z-10"
+        }`}
+      ></div>
     </div>
   );
 };

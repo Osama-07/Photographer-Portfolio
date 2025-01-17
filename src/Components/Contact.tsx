@@ -7,7 +7,11 @@ import {
 
 const Contact = () => {
   return (
-    <div id="contact" className="py-10 px-20 bg-mainAlt">
+    <div
+      className="relative py-10 px-20 bg-mainAlt"
+      id="contact"
+      data-section={"contact"}
+    >
       <h1 className="text-center text-white text-4xl font-extrabold mb-20">
         تــو<span className="text-main">ا</span>صــل
       </h1>
