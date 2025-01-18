@@ -7,6 +7,7 @@ import {
   Pagination,
   Autoplay,
 } from "swiper/modules";
+import { useState } from "react";
 
 interface image {
   id: number;
@@ -19,6 +20,20 @@ interface SlideProps {
 }
 
 const Slide: React.FC<SlideProps> = ({ props, title }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [imageSrc, setImageSrc] = useState("");
+
+  // لفتح النافذة المنبثقة
+  const openPopup = (src: string) => {
+    setImageSrc(src);
+    setIsOpen(true);
+  };
+
+  // لغلق النافذة المنبثقة
+  const closePopup = () => {
+    setIsOpen(false);
+    setImageSrc("");
+  };
   return (
     <section id="tranding" className="pb-12 pt-0">
       <div className="container">
@@ -28,7 +43,7 @@ const Slide: React.FC<SlideProps> = ({ props, title }) => {
         <Swiper
           modules={[EffectCoverflow, Navigation, Pagination, Autoplay]}
           grabCursor={true}
-          centeredSlides={true} 
+          centeredSlides={true}
           slidesPerView={3} // عدد الصور المراد عرضها في نفس الوقت
           spaceBetween={10} // المسافة بين الصور
           autoplay={{ delay: 3000 }}
@@ -62,7 +77,9 @@ const Slide: React.FC<SlideProps> = ({ props, title }) => {
                   src={image.src}
                   alt={image.alt}
                   style={{ width: "100%", borderRadius: "1rem" }}
+                  loading="lazy"
                   className="mb-3"
+                  onClick={() => openPopup(image.src)}
                 />
               </SwiperSlide>
             ))
@@ -72,6 +89,25 @@ const Slide: React.FC<SlideProps> = ({ props, title }) => {
             </h1>
           )}
         </Swiper>
+
+        {isOpen && (
+          <div
+            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+            onClick={closePopup}
+          >
+            <div
+              className="relative bg-white p-4 rounded-lg shadow-lg"
+              onClick={(e) => e.stopPropagation()} // لمنع الإغلاق عند النقر داخل الصورة
+            >
+              <img
+                src={imageSrc}
+                alt="Popup"
+                loading="lazy"
+                className="max-w-full max-h-[80vh] object-contain rounded-lg"
+              />
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

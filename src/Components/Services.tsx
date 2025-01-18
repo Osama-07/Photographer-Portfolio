@@ -33,18 +33,21 @@ const Services = () => {
           className="rounded-xl hover:scale-105 duration-300 cursor-pointer"
           src="/Package-1.png"
           alt=""
+          loading="lazy"
           onClick={() => openPopup("/Package-1.png")}
         />
         <img
           className="rounded-xl hover:scale-105 duration-300 cursor-pointer"
           src="/Package-1.png"
           alt=""
+          loading="lazy"
           onClick={() => openPopup("/Package-1.png")}
         />
         <img
           className="rounded-xl lg:col-span-2 m-auto lg:w-1/2 hover:scale-105 duration-300 cursor-pointer"
           src="/Package-1.png"
           alt=""
+          loading="lazy"
           onClick={() => openPopup("/Package-1.png")}
         />
       </div>
@@ -61,6 +64,7 @@ const Services = () => {
             <img
               src={imageSrc}
               alt="Popup"
+              loading="lazy"
               className="max-w-full max-h-[80vh] object-contain rounded-lg"
             />
           </div>

@@ -15,7 +15,11 @@ const About = () => {
           نـبـذة <span className="text-main">عـنـي</span>
         </h1>
         <div className="info mt-10 grid grid-cols-2 max-lg:grid-cols-1 place-items-center">
-          <img className="" src="/Personal-ImagePNG.PNG" alt="Personal Photo" />
+          <img
+            src="/Personal-ImagePNG.PNG"
+            alt="Personal Photo"
+            loading="lazy"
+          />
           <div className="max-md:rounded-lg pb-5 max-md:text-center">
             <h1 className="rounded-lg relative md:w-fit max-lg:mx-auto text-2xl font-bold my-10 before:w-full before:h-[2px] before:bg-main before:absolute before:left-0 before:-bottom-4 max-lg:before:mx-auto">
               الـمـصـور &nbsp; <span className="text-main">|</span> &nbsp;

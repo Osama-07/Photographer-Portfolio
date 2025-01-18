@@ -1,11 +1,8 @@
 import { useEffect, useRef } from "react";
 import Typed from "typed.js";
-import { useScrollContext } from "../Context/ScrollContext";
 
 const HeroSection = () => {
   const el = useRef(null); // إنشاء مرجع للعنصر
-  const { activeSection } = useScrollContext();
-  const isActive = activeSection === "home";
 
   useEffect(() => {
     const options = {
@@ -35,6 +32,7 @@ const HeroSection = () => {
         className="w-full h-full object-cover"
         src="/Landing-Camera.jpg"
         alt="Landing Camera"
+        loading={"lazy"}
       />
       {/*overlay*/}
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-85"></div>
@@ -67,11 +65,6 @@ const HeroSection = () => {
       >
         <img className="w-full" src="/Whatsapp-logo.png" alt="" />
       </a>
-      <div
-        className={`overlay absolute top-0 left-0 w-full h-full bg-black duration-300 ${
-          isActive ? "opacity-0 -z-10" : "opacity-70 z-10"
-        }`}
-      ></div>
     </div>
   );
 };
