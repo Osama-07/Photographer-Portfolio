@@ -32,7 +32,6 @@ const HeroSection = () => {
         className="w-full h-full object-cover"
         src="/Landing-Camera.jpg"
         alt="Landing Camera"
-        loading={"lazy"}
       />
       {/*overlay*/}
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-85"></div>

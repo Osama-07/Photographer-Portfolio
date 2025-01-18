@@ -1,20 +1,14 @@
 import { useState } from "react";
-import { useScrollContext } from "../Context/ScrollContext";
 
 const Services = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [imageSrc, setImageSrc] = useState("");
 
-  const { activeSection } = useScrollContext();
-  const isActive = activeSection === "services";
-
-  // لفتح النافذة المنبثقة
   const openPopup = (src: string) => {
     setImageSrc(src);
     setIsOpen(true);
   };
 
-  // لغلق النافذة المنبثقة
   const closePopup = () => {
     setIsOpen(false);
     setImageSrc("");
@@ -70,11 +64,6 @@ const Services = () => {
           </div>
         </div>
       )}
-      <div
-        className={`overlay absolute top-0 left-0 w-full h-full bg-black duration-300 ${
-          isActive ? "opacity-0 -z-10" : "opacity-70 z-10"
-        }`}
-      ></div>
     </div>
   );
 };

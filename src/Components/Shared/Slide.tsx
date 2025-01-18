@@ -45,7 +45,7 @@ const Slide: React.FC<SlideProps> = ({ props, title }) => {
           grabCursor={true}
           centeredSlides={true}
           slidesPerView={3} // عدد الصور المراد عرضها في نفس الوقت
-          spaceBetween={10} // المسافة بين الصور
+          spaceBetween={25} // المسافة بين الصور
           autoplay={{ delay: 3000 }}
           loop={props.length > 3}
           navigation={{
@@ -56,16 +56,16 @@ const Slide: React.FC<SlideProps> = ({ props, title }) => {
           breakpoints={{
             0: {
               slidesPerView: 1,
-              spaceBetween: 5,
+              spaceBetween: 25,
             },
 
             768: {
               slidesPerView: 2,
-              spaceBetween: 10,
+              spaceBetween: 25,
             },
             1024: {
               slidesPerView: 3,
-              spaceBetween: 15,
+              spaceBetween: 25,
             },
           }}
           className="!p-5 rounded-2xl shadow-xl bg-gradient-to-b from-main to-main"
@@ -76,9 +76,12 @@ const Slide: React.FC<SlideProps> = ({ props, title }) => {
                 <img
                   src={image.src}
                   alt={image.alt}
-                  style={{ width: "100%", borderRadius: "1rem" }}
+                  style={{
+                    width: "100%",
+                    borderRadius: "1rem",
+                    marginBottom: "1rem",
+                  }}
                   loading="lazy"
-                  className="mb-3"
                   onClick={() => openPopup(image.src)}
                 />
               </SwiperSlide>

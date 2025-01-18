@@ -1,4 +1,3 @@
-import { useScrollContext } from "../Context/ScrollContext";
 import Slide from "./Shared/Slide";
 
 const products = [
@@ -128,8 +127,6 @@ const weddings = [
 ];
 
 const Projects = () => {
-  const { activeSection } = useScrollContext();
-  const isActive = activeSection === "work";
   return (
     <div
       id="work"
@@ -142,11 +139,6 @@ const Projects = () => {
       <Slide props={products} title="تـصـويـر مـنـتـجـات" />
       <Slide props={weddings} title="تـصـويـر زواجــات" />
       <Slide props={[]} title="تـصـويـر شـخـصـي" />
-      <div
-        className={`overlay absolute top-0 left-0 w-full h-full bg-black duration-300 ${
-          isActive ? "opacity-0 -z-10" : "opacity-70 z-10"
-        }`}
-      ></div>
     </div>
   );
 };
