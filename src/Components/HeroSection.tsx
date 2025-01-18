@@ -7,11 +7,12 @@ const HeroSection = () => {
   useEffect(() => {
     const options = {
       strings: [
-        `إلتقاط <span class="text-main">اللحظات</span>، إحياء للذكريات`,
+        `الـمـصـور عـبـدالله عـبـدالـعـزيـز`,
+        `إلتقاط <span class="text-mainAlt">اللحظات</span>، إحياء للذكريات`,
       ],
       cursorChar: ".",
       typeSpeed: 40,
-      loop: false,
+      loop: true,
       contentType: "html",
     };
 
@@ -36,7 +37,12 @@ const HeroSection = () => {
       {/*overlay*/}
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-85"></div>
       <div className="w-full px-3 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-        <h1 className="mb-4 text-4xl font-extrabold leading-normal tracking-tight md:text-5xl lg:text-6xl text-white">
+        <img
+          src="/Abodspro-Logo.PNG"
+          alt=""
+          className="duration-500 w-32 h-32 mx-auto mb-5 animate-spin-slow"
+        />
+        <h1 className="mb-4 text-4xl font-extrabold leading-normal tracking-tight md:text-5xl max-sm:text-[30px] lg:text-6xl text-white">
           <span ref={el} />
         </h1>
         <p className="mb-6text-center !leading-loose mt-10 mb-6 text-lg font-normal lg:text-xl sm:px-16 xl:px-48 text-gray-400">

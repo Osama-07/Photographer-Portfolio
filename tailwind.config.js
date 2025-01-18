@@ -13,6 +13,9 @@ export default {
         main: "var(--mainColor)",
         mainAlt: "var(--mainColorAlt)",
       },
+      animation: {
+        "spin-slow": "spin 5s linear infinite",
+      },
     },
   },
   plugins: [],

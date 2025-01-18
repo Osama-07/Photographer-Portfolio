@@ -13,22 +13,22 @@ const products = [
   },
   {
     id: 3,
-    src: "/تصوير اطعمة/_MG_5152.JPEG",
+    src: "/تصوير اطعمة/_MG_5152.jpg",
     alt: "_MG_5152.JPEG",
   },
   {
     id: 4,
-    src: "/تصوير اطعمة/_MG_5153.JPEG",
+    src: "/تصوير اطعمة/_MG_5153.jpg",
     alt: "_MG_5153.JPEG",
   },
   {
     id: 5,
-    src: "/تصوير اطعمة/_MG_5154.JPEG",
+    src: "/تصوير اطعمة/_MG_5154.jpg",
     alt: "_MG_5154.JPEG",
   },
   {
     id: 6,
-    src: "/تصوير اطعمة/_MG_5155.JPEG",
+    src: "/تصوير اطعمة/_MG_5155.jpg",
     alt: "_MG_5155.JPEG",
   },
   {
@@ -111,16 +111,11 @@ const weddings = [
   },
   {
     id: 2,
-    src: "/زواجات/7FC4BA8D-B938-4BD1-BAA6-15A3446A74D2.JPG",
-    alt: "jpg",
-  },
-  {
-    id: 3,
     src: "/زواجات/B033FDE4-BBF0-4C81-952B-FEDA94ED9CD9.JPG",
     alt: "jpg",
   },
   {
-    id: 4,
+    id: 3,
     src: "/زواجات/DAE232E4-F669-4EA5-B988-1CC0567B5F22.JPG",
     alt: "jpg",
   },
