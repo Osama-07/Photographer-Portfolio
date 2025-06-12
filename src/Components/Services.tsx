@@ -15,7 +15,7 @@ const Services = () => {
   };
   return (
     <div
-      className="relative p-10 bg-main"
+      className="relative p-10 bg-gradient-to-br from-main via-white to-mainAlt"
       id="services"
       data-section={"services"}
     >

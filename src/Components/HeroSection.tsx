@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { FaWhatsapp } from "react-icons/fa";
 import Typed from "typed.js";
 
 const HeroSection = () => {
@@ -66,9 +67,15 @@ const HeroSection = () => {
       <a
         href="https://wa.me/966531177595"
         target="_blank"
-        className="z-50 max-md:opacity-30 hover:opacity-100 fixed w-16 h-16 bottom-10 right-6 duration-200 hover:scale-110 cursor-pointer"
+        className="z-50 max-md:opacity-30 hover:opacity-100 fixed w-16 h-16 bottom-10 right-6 duration-200 hover:scale-110 cursor-pointer text-[#c8b192] backdrop-blur bg-opacity-50 rounded-lg"
       >
-        <img className="w-full" src="/Whatsapp-logo.png" alt="" />
+        <a
+          className="text-6xl transition-all hover:scale-110"
+          href="https://wa.me/966531177595"
+          target="_blank"
+        >
+          <FaWhatsapp />
+        </a>
       </a>
     </div>
   );
